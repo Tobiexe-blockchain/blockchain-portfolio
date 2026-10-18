@@ -2,7 +2,9 @@
 
 A one-page portfolio for five connected exchange projects: a trading screen, an account app, a double-entry ledger, an auth and security service, and a wallet service. Each project has a short summary, a drawing of what it does, how it is tested, a link to its code, and a live demo where one exists.
 
-Live site: https://blockchain-portfolio-tobi.vercel.app (see the repository description for the current address)
+Live site: https://blockchain-portfolio-phi.vercel.app
+
+Trading screen demo: https://phantom-exchange-ui.vercel.app
 
 ## Edit it
 
@@ -34,3 +36,4 @@ Noir to match the projects it shows: flat black surfaces, 1px borders, one amber
 
 - The page is static. There is no server, no tracking, and no external requests apart from the links.
 - The five projects run on test networks only.
+- Vercel cannot see this GitHub account yet, so pushing here does not redeploy by itself. Install the Vercel GitHub app on this account to turn on automatic deploys.
