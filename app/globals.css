@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --surface-raised: #141414;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.32);
+  --text: #fafafa;
+  --text-muted: #a1a1a1;
+  --accent: #f2a93b;
+  --accent-hover: #f5b95c;
+  --accent-pressed: #d98f20;
+  --on-accent: #000000;
+  --success: #3ecf8e;
+  --danger: #ff6369;
+  --focus-ring: #fafafa;
+
+  --z-base: 0;
+  --z-sticky: 10;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-line: var(--border);
+  --color-fg: var(--text);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-pressed: var(--accent-pressed);
+  --color-on-accent: var(--on-accent);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+html {
+  scroll-padding-top: 6rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+a,
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Figures: drawn with the page's own colors so they never look pasted in. */
+.fig text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--text-muted);
+}
+.fig .t {
+  fill: var(--text);
+}
+.fig .a {
+  fill: var(--accent);
+}
+.fig .box {
+  fill: var(--bg);
+  stroke: var(--border-strong);
+  stroke-width: 1;
+}
+.fig .dash {
+  stroke-dasharray: 4 4;
+}
+.fig .ln {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1;
+}
+.fig .lna {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+.fig .up {
+  fill: var(--success);
+  opacity: 0.6;
+}
+.fig .down {
+  fill: var(--danger);
+  opacity: 0.6;
+}
+.fig .head {
+  fill: var(--border-strong);
+}
+.fig .heada {
+  fill: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
